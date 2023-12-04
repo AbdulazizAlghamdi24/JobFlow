@@ -1,0 +1,173 @@
+/* src/App.css */
+.job-list-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* creates four columns */
+    gap: 20px; /* space between cards */
+    padding: 20px;
+  }
+  
+  .job-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .job-card-image-container {
+    width: 100%;
+    /* Assuming a fixed height for images. Adjust as needed. */
+    height: 150px;
+    background-color: #f0f0f0; /* Placeholder in case of no image */
+  }
+  
+  .job-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container */
+  }
+  
+  .job-card-content {
+    padding: 10px;
+  }
+  
+  .job-card-title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  .job-card-detail {
+    font-size: 0.9rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .job-card-rating {
+    display: flex;
+    align-items: center;
+  }
+  
+  .job-card-stars {
+    color: #ffd700; /* Star rating color */
+  }
+  
+  .job-card-rating-count {
+    margin-left: 5px;
+    color: #333;
+    font-size: 0.9rem;
+  }
+  
+  .job-card-salary {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #28a745; /* Color for salary */
+    margin-bottom: 10px;
+  }
+  
+  .job-card-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto; /* Pushes the buttons to the bottom */
+  }
+  
+  .job-card-btn {
+    flex-grow: 1;
+    padding: 8px;
+    margin: 2px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: 0.9rem;
+  }
+  
+  .job-card-btn.like {
+    background-color: #007bff;
+  }
+  
+  .job-card-btn.contact {
+    background-color: #28a745;
+  }
+  .job-card-btn.like.liked {
+    background-color: #a73d28; /* or any other style change you prefer */
+  }
+  
+  @media (max-width: 1200px) {
+    .job-list-container {
+      grid-template-columns: repeat(
+        3,
+        1fr
+      ); /* 3 cards per row for smaller screens */
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .job-list-container {
+      grid-template-columns: repeat(
+        2,
+        1fr
+      ); /* 2 cards per row for even smaller screens */
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .job-list-container {
+      grid-template-columns: 1fr; /* 1 card per row for mobile screens */
+    }
+  }
+  
+  /* src/App.css */
+  .add-job-form-container {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+  }
+  
+  .add-job-form h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .add-job-form label {
+    display: block;
+    margin-top: 10px;
+    color: #333;
+  }
+  
+  .add-job-form input[type="text"],
+  .add-job-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box; /* Makes sure the width includes padding */
+  }
+  
+  .add-job-form textarea {
+    height: 100px; /* Sets a default height for the textarea */
+  }
+  
+  .submit-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .submit-btn:hover {
+    background-color: #0056b3;
+  }
+  

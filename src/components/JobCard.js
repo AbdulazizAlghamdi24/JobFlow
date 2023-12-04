@@ -22,7 +22,7 @@ function JobCard({ job, onLike, isLikedInitially }) {
       <div className="job-card-content">
         <h3 className="job-card-title">{job.title}</h3>
         <p className="job-card-detail">{job.description}</p>
-        <div className="job-card-salary">{job.salary}</div>
+        <div className="job-card-salary">{job.salary} SR</div>
         <div className="job-card-buttons">
           <button
             className={`job-card-btn like ${isLiked ? "liked" : ""}`}

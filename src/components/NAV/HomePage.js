@@ -4,41 +4,45 @@ import '../styles.css';
 
 function HomePage({ likeJob }) {
   const [jobs, setJobs] = useState([]);
+  const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
-    const fetchJobs = async () => {
-      try {
-        const response = await fetch('http://localhost:8081/jobs');
-        if (response.ok) {
-          const fetchedJobs = await response.json();
-          setJobs(fetchedJobs);
-        } else {
-          // If the response is not ok, handle errors here
-          console.error('Failed to fetch jobs:', response.statusText);
-        }
-      } catch (error) {
-        // Handle network errors here
-        console.error('Network error when fetching jobs:', error.message);
-      }
-    };
+    // Fetch jobs from your API
+    fetch('http://localhost:8081/jobs')
+      .then((res) => res.json())
+      .then((data) => {
+        setJobs(data);
+      })
+      .catch((err) => console.log(err));
+  }, []);
 
-    fetchJobs();
-  }, []); // Empty dependency array means this effect will only run once, after initial render
-
-  const handleLike = (job) => {
-    likeJob(job);
+  const handleSearchChange = (event) => {
+    setSearchTerm(event.target.value);
   };
 
+  const filteredJobs = jobs.filter((job) =>
+    job.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
-    <div className="job-list-container">
-      {jobs.map((job) => (
-        <JobCard
-          key={job.id}
-          job={job}
-          onLike={() => handleLike(job)}
-          isLikedInitially={false} // Assuming you have logic to determine if a job is initially liked
-        />
-      ))}
+    <div className="homepage-container">
+      <input
+        type="text"
+        placeholder="Search for jobs..."
+        value={searchTerm}
+        onChange={handleSearchChange}
+        className="search-bar"
+      />
+      <div className="job-list-container">
+        {filteredJobs.map((job) => (
+          <JobCard
+            key={job.id}
+            job={job}
+            onLike={() => likeJob(job)}
+            isLikedInitially={false}
+          />
+        ))}
+      </div>
     </div>
   );
 }

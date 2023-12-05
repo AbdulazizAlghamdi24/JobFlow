@@ -1,4 +1,3 @@
-// src/components/MyJobsPage.js
 import React from "react";
 import JobCard from "../JobCard";
 import "../styles.css";
@@ -16,7 +15,7 @@ function MyJobsPage({ likedJobs, likeJob }) {
           />
         ))
       ) : (
-        <p>No liked jobs yet.</p>
+        <p>No favorite jobs.</p>
       )}
     </div>
   );

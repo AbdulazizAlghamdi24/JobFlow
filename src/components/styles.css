@@ -1,8 +1,7 @@
-/* src/App.css */
 .job-list-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* creates four columns */
-    gap: 20px; /* space between cards */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px; 
     padding: 20px;
   }
   
@@ -17,15 +16,14 @@
   
   .job-card-image-container {
     width: 100%;
-    /* Assuming a fixed height for images. Adjust as needed. */
     height: 150px;
-    background-color: #f0f0f0; /* Placeholder in case of no image */
+    background-color: #f0f0f0; 
   }
   
   .job-card-image {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the image covers the container */
+    object-fit: cover; 
   }
   
   .job-card-content {
@@ -50,7 +48,7 @@
   }
   
   .job-card-stars {
-    color: #ffd700; /* Star rating color */
+    color: #ffd700; 
   }
   
   .job-card-rating-count {
@@ -62,14 +60,14 @@
   .job-card-salary {
     font-size: 1rem;
     font-weight: bold;
-    color: #28a745; /* Color for salary */
+    color: #28a745; 
     margin-bottom: 10px;
   }
   
   .job-card-buttons {
     display: flex;
     justify-content: space-between;
-    margin-top: auto; /* Pushes the buttons to the bottom */
+    margin-top: auto; 
   }
   
   .job-card-btn {
@@ -91,7 +89,7 @@
     background-color: #28a745;
   }
   .job-card-btn.like.liked {
-    background-color: #a73d28; /* or any other style change you prefer */
+    background-color: #a73d28; 
   }
   
   @media (max-width: 1200px) {
@@ -99,7 +97,7 @@
       grid-template-columns: repeat(
         3,
         1fr
-      ); /* 3 cards per row for smaller screens */
+      ); 
     }
   }
   
@@ -108,17 +106,16 @@
       grid-template-columns: repeat(
         2,
         1fr
-      ); /* 2 cards per row for even smaller screens */
+      ); 
     }
   }
   
   @media (max-width: 600px) {
     .job-list-container {
-      grid-template-columns: 1fr; /* 1 card per row for mobile screens */
+      grid-template-columns: 1fr;
     }
   }
   
-  /* src/App.css */
   .add-job-form-container {
     max-width: 500px;
     margin: 40px auto;
@@ -147,11 +144,11 @@
     margin-top: 5px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    box-sizing: border-box; /* Makes sure the width includes padding */
+    box-sizing: border-box; 
   }
   
   .add-job-form textarea {
-    height: 100px; /* Sets a default height for the textarea */
+    height: 100px; 
   }
   
   .submit-btn {

@@ -1,4 +1,3 @@
-// src/App.js
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavigationBar from "./components/NAV/NavigationBar";
@@ -15,10 +14,10 @@ function App() {
     setLikedJobs((prevLikedJobs) => {
       const isAlreadyLiked = prevLikedJobs.some((j) => j.id === job.id);
       if (isAlreadyLiked) {
-        // Remove the job from liked jobs
+        
         return prevLikedJobs.filter((j) => j.id !== job.id);
       } else {
-        // Add the job to liked jobs
+        
         return [...prevLikedJobs, job];
       }
     });

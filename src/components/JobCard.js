@@ -1,6 +1,6 @@
-// src/components/JobCard.js
+
 import React, { useState, useEffect } from "react";
-import "./styles.css"; // Importing App.css for styles
+import "./styles.css"; 
 
 function JobCard({ job, onLike, isLikedInitially }) {
   const [isLiked, setIsLiked] = useState(isLikedInitially);
@@ -16,7 +16,6 @@ function JobCard({ job, onLike, isLikedInitially }) {
   return (
     <div className="job-card">
       <div className="job-card-image-container">
-        {/* Assuming job.imageUrl exists */}
         <img src={job.imageUrl} alt={job.title} className="job-card-image" />
       </div>
       <div className="job-card-content">

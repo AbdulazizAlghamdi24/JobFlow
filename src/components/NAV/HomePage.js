@@ -7,7 +7,6 @@ function HomePage({ likeJob }) {
   const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
-    // Fetch jobs from your API
     fetch('http://localhost:8081/jobs')
       .then((res) => res.json())
       .then((data) => {

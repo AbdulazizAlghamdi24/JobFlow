@@ -1,6 +1,5 @@
-// src/components/AddJobPage.js
 import React, { useState } from "react";
-import "../styles.css"; // Importing App.css for styles
+import "../styles.css"; 
 
 function AddJobPage() {
   const [title, setTitle] = useState("");
@@ -21,7 +20,7 @@ function AddJobPage() {
         body: JSON.stringify({
           title,
           description,
-          salary: parseFloat(salary), // Convert salary to a float
+          salary: parseFloat(salary), 
           imageUrl,
         }),
       });
@@ -29,13 +28,13 @@ function AddJobPage() {
       if (response.ok) {
         const data = await response.json();
         console.log("Job added:", data);
-        // Reset form fields
+        
         setTitle("");
         setDescription("");
         setSalary("");
         setImageUrl("");
       } else {
-        // Handle server-side errors
+        
         const errorData = await response.json();
         console.error("Failed to add job:", errorData);
       }

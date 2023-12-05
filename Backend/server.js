@@ -46,6 +46,18 @@ app.post('/jobs', (req, res) => {
   });
 });
 
+app.delete('/jobs/:id', (req, res) => {
+  const { id } = req.params;
+  const sql = "DELETE FROM jobs WHERE id = ?";
+  db.query(sql, id, (err, result) => {
+    if (err) {
+      console.error("Error deleting job:", err);
+      return res.status(500).json({ error: err.message });
+    }
+    res.status(200).json({ message: "Job deleted successfully" });
+  });
+});
+
 
 const PORT = process.env.PORT || 8081;
 app.listen(PORT, () => {

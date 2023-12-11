@@ -17,4 +17,5 @@ Our platform connects companies and job searchers, offering a smooth and effecti
 ![لقطة شاشة 2023-12-07 101539](https://github.com/AbdulazizAlghamdi24/JobFlow/assets/108232364/8d69da66-603f-44db-9565-29e649dbd2e4)
 5-Admin Dashboard
 ![لقطة شاشة 2023-12-07 101425](https://github.com/AbdulazizAlghamdi24/JobFlow/assets/108232364/6857428b-b1fe-4dde-b555-e73f59ff0c67)
-https://www.youtube.com/watch?v=JdSkRlYeTCw&ab_channel=Gintoki24 
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YOUTUBE_VI...)](https://www.youtube.com/watch?v=YOUTU...)
